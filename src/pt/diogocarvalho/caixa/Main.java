@@ -1,12 +1,24 @@
 package pt.diogocarvalho.caixa;
+import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
-		Caixa caixa = new Caixa(4, 4, '-');
-		caixa.print();
+	public static void main(String[] args) { //throws Exception
+		Scanner in = new Scanner(System.in);
 		
-		Caixa caixa2 = new Caixa(6, 6, 'W');
-		caixa2.print();
+		System.out.println("Width: ");
+		int width = in.nextInt();
+		
+		System.out.println("Height: ");
+		int height = in.nextInt();
+		
+		Caixa caixa = new Caixa(width, height, '-');
+		
+		try {
+			caixa.print();
+		} catch (Exception e) {
+			System.out.println("Ocorreu um erro ao desenhar a caixa!");
+			System.out.println(e.getMessage());
+		}
 	}
 }
