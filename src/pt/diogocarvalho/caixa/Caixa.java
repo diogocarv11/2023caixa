@@ -18,7 +18,7 @@ public class Caixa {
 		height = heightParam;
 		character = characterParam;
 	}
-	public void print() throws NotEnoughWidthException{
+	public void print() throws NotEnoughWidthException, NotEnoughHeightException{
 		if (width < 4) {
 			//width = 4;
 			//Unchecked Exception
