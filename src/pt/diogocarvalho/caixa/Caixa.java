@@ -1,5 +1,7 @@
 package pt.diogocarvalho.caixa;
 
+import pt.diogocarvalho.caixa.errors.NotEnoughWidthException;
+
 public class Caixa {
 	
 	private int width;
@@ -20,15 +22,21 @@ public class Caixa {
 			//width = 4;
 			//Unchecked Exception
 			//throw new RuntimeException("Width cannot be less than 4");
+			
 			//Check Exception
-			throw new Exception("Width cannot be less than 4");
+			//throw new Exception("Width cannot be less than 4");
+			throw new NotEnoughWidthException("Width cannot be less than 4");
+			
 		}
 		if (height < 4) {
 			//height = 4;
 			//Unchecked Exception
 			//throw new RuntimeException("Height cannot be less than 4");
+			
+			throw new NotEnoughWidthException("Height cannot be less than 4");
+			
 			//Check Exception
-			throw new Exception("Height cannot be less than 4");
+			//throw new Exception("Height cannot be less than 4");
 		}
 		printTopOrBottom();
 		printLeftAndRight();
