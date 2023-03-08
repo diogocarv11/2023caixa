@@ -6,7 +6,7 @@ public class Main {
 		Caixa caixa = new Caixa(4, 4, '-');
 		caixa.print();
 		
-		Caixa caixa2 = new Caixa(6, 6);
+		Caixa caixa2 = new Caixa(6, 6, 'W');
 		caixa2.print();
 	}
 }
